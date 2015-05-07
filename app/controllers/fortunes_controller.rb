@@ -10,4 +10,12 @@ class FortunesController < ApplicationController
   def unlucky
     @numbers = [rand(100...1000), rand(100...1000), rand(100...1000), rand(100...1000), rand(100...1000)]
   end
+
+  def withinrange
+
+    @min = params[:min].to_i
+    @max = params[:max].to_i
+    @the_number = rand(@min .. @max)
+
+  end
 end

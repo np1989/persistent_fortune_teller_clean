@@ -1,0 +1,20 @@
+<h1>List of Zodiacs</h1>
+
+<table class = "table table-striped table-hover">
+  <tr>
+    <th>Signs</th>
+    <th>Creature</th>
+    <th>Fortune</th>
+  </tr>
+
+  <% @list_of_zodiacs.each do |zodiac| %>
+    <tr>
+      <td><%= zodiac.sign %></td>
+      <td><%= zodiac.creature %></td>
+      <td><%= zodiac.fortune %></td>
+      <td> <a href = "http://localhost:3000/delete_zodiac/<%= zodiac.id %>">Delete</a></td>
+    </tr>
+
+  <% end %>
+
+</table>
